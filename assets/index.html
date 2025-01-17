@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+        <html>
+            <head>
+                <title>SEO Analyzer</title>
+                <style>
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    
+                    body {
+                        font-family: 'Segoe UI', system-ui, sans-serif;
+                        min-height: 100vh;
+                        background: linear-gradient(135deg, #1e1e2e 0%, #2d2b55 100%);
+                        color: #fff;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .container {
+                        max-width: 800px;
+                        margin: 0 auto;
+                        padding: 40px 20px;
+                        flex: 1;
+                    }
+
+                    h1 {
+                        font-size: 2.5em;
+                        margin-bottom: 30px;
+                        background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        text-align: center;
+                    }
+
+                    .card {
+                        background: rgba(255, 255, 255, 0.1);
+                        backdrop-filter: blur(10px);
+                        border-radius: 15px;
+                        padding: 30px;
+                        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                    }
+
+                    form {
+                        display: flex;
+                        gap: 10px;
+                        margin: 20px 0;
+                    }
+
+                    input[type="url"] {
+                        flex: 1;
+                        padding: 12px 20px;
+                        border: none;
+                        border-radius: 8px;
+                        background: rgba(255, 255, 255, 0.05);
+                        color: #fff;
+                        font-size: 16px;
+                        transition: all 0.3s ease;
+                    }
+
+                    input[type="url"]:focus {
+                        outline: none;
+                        background: rgba(255, 255, 255, 0.1);
+                        box-shadow: 0 0 0 2px rgba(78, 205, 196, 0.5);
+                    }
+
+                    button {
+                        padding: 12px 30px;
+                        border: none;
+                        border-radius: 8px;
+                        background: linear-gradient(90deg, #4ecdc4, #2cb5e8);
+                        color: #fff;
+                        font-weight: bold;
+                        cursor: pointer;
+                        transition: transform 0.2s ease;
+                    }
+
+                    button:hover {
+                        transform: translateY(-2px);
+                    }
+
+                    footer {
+                        text-align: center;
+                        padding: 20px;
+                        background: rgba(0, 0, 0, 0.2);
+                        color: rgba(255, 255, 255, 0.7);
+                        font-size: 0.9em;
+                    }
+
+                    footer span {
+                        color: #ff6b6b;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <h1>Website SEO Analyzer</h1>
+                    <div class="card">
+                        <form action="/analyze" method="POST">
+                            <input type="url" name="url" placeholder="Enter website URL" required>
+                            <button type="submit">Analyze</button>
+                        </form>
+                    </div>
+                </div>
+                <footer>
+                    made w/ ♥ in sf🌁 with cloudflare
+                </footer>
+            </body>
+        </html>
