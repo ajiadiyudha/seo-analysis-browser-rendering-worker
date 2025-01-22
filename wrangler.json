@@ -9,5 +9,24 @@
   },
   "browser" : { "binding" : "BROWSER" },
   "ai" : { "binding" : "AI" },
-  "assets" : { "directory": "assets" }
+  "assets" : { "directory": "assets" },
+  "r2_buckets" : [
+    { "binding" : "BUCKET", "bucket_name" : "seoanalysis", "preview_bucket_name" : "seoanalysis-test" }
+  ],
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "BROWSERDO",
+        "class_name": "BrowserDo"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_classes": [
+        "BrowserDo"
+      ]
+    }
+  ]
 }

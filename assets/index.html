@@ -92,20 +92,47 @@
                     footer span {
                         color: #ff6b6b;
                     }
+                    .loading {
+                        display: none;
+                        margin: 20px 0;
+                        text-align: center;
+                        color: #4ecdc4;
+                        font-size: 1.2em;
+                    }
+
+                    .loading:after {
+                        content: '';
+                        animation: dots 1.4s infinite;
+                    }
+
+                    @keyframes dots {
+                        0%, 20% { content: '.'; }
+                        40% { content: '..'; }
+                        60% { content: '...'; }
+                        80%, 100% { content: ''; }
+                    }
                 </style>
+                <meta charset="UTF-8">
             </head>
             <body>
                 <div class="container">
                     <h1>Website SEO Analyzer</h1>
                     <div class="card">
-                        <form action="/analyze" method="POST">
+                        <form action="/analyze" method="POST" id="analyzeForm">
                             <input type="url" name="url" placeholder="Enter website URL" required>
                             <button type="submit">Analyze</button>
                         </form>
+                        <div id="loadingMessage" class="loading">Analyzing website</div>
                     </div>
                 </div>
                 <footer>
-                    made w/ ♥ in sf🌁 with cloudflare
+                    made w/ ❤️ in sf🌁 with cloudflare -> <a href="https://github.com/elizabethsiegle/seo-analysis-browser-rendering-worker">code🧑🏻‍💻</a>
                 </footer>
+                <script>
+                    document.getElementById('analyzeForm').addEventListener('submit', function() {
+                        this.style.display = 'none';
+                        document.getElementById('loadingMessage').style.display = 'block';
+                    });
+                </script>
             </body>
         </html>
