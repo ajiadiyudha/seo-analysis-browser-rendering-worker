@@ -10,12 +10,12 @@
     "cf-typegen": "wrangler types"
   },
   "devDependencies": {
-    "@cloudflare/puppeteer": "^0.0.14",
-    "@cloudflare/vitest-pool-workers": "^0.5.2",
+    "@cloudflare/puppeteer": "^0.0.11",
+    "@cloudflare/vitest-pool-workers": "^0.8.18",
     "@cloudflare/workers-types": "^4.20250109.0",
     "typescript": "^5.5.2",
-    "vitest": "2.1.8",
-    "wrangler": "^3.103.1"
+    "vitest": "^2.1.9",
+    "wrangler": "^4.12.0"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.7",
